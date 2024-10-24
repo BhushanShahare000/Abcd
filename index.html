@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Open App</title>
+    <script>
+        window.onload = function () {
+            // Try to open the app using the custom scheme
+            window.location.href = "myapp://details/123";
+
+            // Fallback to Play Store if the app is not installed
+            setTimeout(function () {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.apps.sunsoor";
+            }, 1500);
+        };
+    </script>
+</head>
+
+<body>
+    <p>Redirecting to the app...</p>
+</body>
+
+</html>
